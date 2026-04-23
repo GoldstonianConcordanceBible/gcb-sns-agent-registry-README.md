@@ -55,10 +55,10 @@ This checklist is designed for:
 
 ## Required SNS IDs
 
-- [ ] `mount.sol`
+- [ ] `themount.sol`
 - [ ] `professorenoch.sol`
-- [ ] `elise.sol`
-- [ ] `sydney.sol`
+- [ ] `elisegoldston.sol`
+- [ ] `sydneyleona.sol`
 - [ ] `sydtekscholars.sol`
 - [ ] `sydtekuniversity.sol`
 
@@ -71,10 +71,10 @@ This checklist is designed for:
 
 ## Required purpose documentation
 
-- [ ] `mount.sol` documented as origin / guardian / treasury-anchor node
+- [ ] `themount.sol` documented as origin / guardian / treasury-anchor node
 - [ ] `professorenoch.sol` documented as interpreter / publishing node
-- [ ] `elise.sol` documented as legacy family node with custody rationale
-- [ ] `sydney.sol` documented as future stewardship / legacy node with custody rationale
+- [ ] `elisegoldston.sol` documented as legacy family node with custody rationale
+- [ ] `sydneyleona.sol` documented as future stewardship / legacy node with custody rationale
 - [ ] `sydtekscholars.sol` documented as education node
 - [ ] `sydtekuniversity.sol` documented as institutional authority node
 
