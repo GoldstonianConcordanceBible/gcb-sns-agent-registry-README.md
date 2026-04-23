@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/domain-entry.schema.json",
+  "title": "GCB SNS Domain Entry",
+  "type": "object",
+  "required": [
+    "sns_name",
+    "resolved_role",
+    "owner_wallet",
+    "records",
+    "status"
+  ],
+  "properties": {
+    "sns_name": {
+      "type": "string"
+    },
+    "resolved_role": {
+      "type": "string"
+    },
+    "owner_wallet": {
+      "type": "string"
+    },
+    "records": {
+      "type": "object",
+      "properties": {
+        "website": { "type": "string" },
+        "github": { "type": "string" },
+        "twitter": { "type": "string" },
+        "discord": { "type": "string" },
+        "agent_registry": { "type": "string" },
+        "prompt_registry": { "type": "string" }
+      }
+    },
+    "status": {
+      "type": "object",
+      "required": ["active", "visibility"],
+      "properties": {
+        "active": { "type": "boolean" },
+        "visibility": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}
