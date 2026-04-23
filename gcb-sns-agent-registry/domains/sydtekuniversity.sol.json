@@ -1,0 +1,18 @@
+{
+  "sns_name": "sydtekuniversity.sol",
+  "resolved_role": "institutional_node",
+  "owner_wallet": "REPLACE_WITH_WALLET",
+  "records": {
+    "website": "https://REPLACE_WITH_SITE",
+    "github": "https://github.com/REPLACE_WITH_ORG/gcb-sns-agent-registry",
+    "twitter": "",
+    "discord": "",
+    "agent_registry": "registry/registry.json",
+    "prompt_registry": ""
+  },
+  "status": {
+    "active": true,
+    "visibility": "public",
+    "notes": "Institutional identity for SydTek University."
+  }
+}
