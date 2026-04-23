@@ -1,0 +1,48 @@
+{
+  "id": "sydney-sol",
+  "sns_name": "sydney.sol",
+  "display_name": "Sydney",
+  "role": "legacy_node",
+  "state": "registry_only",
+  "description": "Future-facing legacy and stewardship identity node within the GCB ecosystem.",
+  "wallet": {
+    "chain": "solana",
+    "address": "REPLACE_WITH_WALLET",
+    "custody_model": "family_controlled",
+    "multisig": false
+  },
+  "governance": {
+    "role_class": "legacy_node",
+    "voting_weight": 0.3,
+    "permissions": [
+      "identity_presence",
+      "legacy_mapping",
+      "future_stewardship_reference"
+    ]
+  },
+  "agent": {
+    "type": "legacy_identity",
+    "status": "registry_only",
+    "capabilities": [
+      "identity_anchor",
+      "future_stewardship_extension"
+    ],
+    "endpoint": ""
+  },
+  "repos": [],
+  "web": {
+    "primary_site": "",
+    "secondary_sites": []
+  },
+  "tee": {
+    "enabled": false,
+    "attestation_status": "not_applicable",
+    "attestation_file": "",
+    "notes": "Registry-only identity unless future agent logic or educational stewardship functions are assigned."
+  },
+  "metadata": {
+    "created_at": "2026-04-22T00:00:00Z",
+    "updated_at": "2026-04-22T00:00:00Z",
+    "maintainer": "Dr. Justin Goldston"
+  }
+}
