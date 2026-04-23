@@ -1,0 +1,60 @@
+{
+  "id": "professorenoch-sol",
+  "sns_name": "professorenoch.sol",
+  "display_name": "Professor Enoch",
+  "role": "interpreter_agent",
+  "state": "linked_repo",
+  "description": "Interpreter and publishing identity for GEO, theology, and cross-platform machine-readable commentary.",
+  "wallet": {
+    "chain": "solana",
+    "address": "REPLACE_WITH_WALLET",
+    "custody_model": "operator_controlled",
+    "multisig": false
+  },
+  "governance": {
+    "role_class": "interpreter_agent",
+    "voting_weight": 0.7,
+    "permissions": [
+      "read_canon",
+      "publish_content",
+      "cross_platform_distribution",
+      "metadata_interpretation"
+    ]
+  },
+  "agent": {
+    "type": "publishing_agent",
+    "status": "active_design",
+    "capabilities": [
+      "read_gcb_corpus",
+      "draft_platform_content",
+      "interpret_doctrine",
+      "respond_as_persona"
+    ],
+    "endpoint": ""
+  },
+  "repos": [
+    {
+      "name": "gcb-knowledge-infrastructure",
+      "relationship": "linked_repo",
+      "path": "agents/professor-enoch"
+    }
+  ],
+  "web": {
+    "primary_site": "https://REPLACE_WITH_SITE",
+    "secondary_sites": [
+      "https://REPLACE_WITH_SUBSTACK",
+      "https://REPLACE_WITH_MEDIUM"
+    ]
+  },
+  "tee": {
+    "enabled": false,
+    "attestation_status": "not_required_yet",
+    "attestation_file": "",
+    "notes": "May later require trusted execution if expanded into autonomous publishing or signing."
+  },
+  "metadata": {
+    "created_at": "2026-04-22T00:00:00Z",
+    "updated_at": "2026-04-22T00:00:00Z",
+    "maintainer": "Dr. Justin Goldston"
+  }
+}
