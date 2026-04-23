@@ -1,0 +1,18 @@
+{
+  "sns_name": "professorenoch.sol",
+  "resolved_role": "interpreter_agent",
+  "owner_wallet": "REPLACE_WITH_WALLET",
+  "records": {
+    "website": "https://REPLACE_WITH_SITE",
+    "github": "https://github.com/REPLACE_WITH_ORG/gcb-sns-agent-registry",
+    "twitter": "",
+    "discord": "",
+    "agent_registry": "registry/registry.json",
+    "prompt_registry": ""
+  },
+  "status": {
+    "active": true,
+    "visibility": "public",
+    "notes": "Publishing and interpretation identity for GEO and GCB commentary."
+  }
+}
