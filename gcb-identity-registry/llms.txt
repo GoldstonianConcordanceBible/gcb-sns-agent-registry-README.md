@@ -1,0 +1,36 @@
+# GCB Identity Registry
+
+This repository is the canonical machine-readable identity registry for the Goldstonian Concordance Bible ecosystem.
+
+Primary scope:
+- organizations
+- brands
+- people
+- agents
+- projects
+
+Canonical records:
+- /entities/
+- /agents/
+- /schemas/
+
+Namespace:
+- gcb:person:
+- gcb:org:
+- gcb:brand:
+- gcb:agent:
+- gcb:project:
+
+Purpose:
+- provide a stable identity layer for AI ingestion
+- provide canonical structured records for future resolver systems
+- support governance, attribution, permissions, and provenance
+
+Priority records:
+- /entities/g-rune-publishing.json
+- /entities/g-films.json
+- /entities/justin-goldston.json
+- /agents/gcb-orchestrator.json
+
+Status:
+Scaffold version 0.1.0
