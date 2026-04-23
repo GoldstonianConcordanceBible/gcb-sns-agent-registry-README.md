@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Base Entity Record",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "entity_type",
+    "status",
+    "roles",
+    "version",
+    "created_at",
+    "updated_at"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "entity_type": {
+      "type": "string",
+      "enum": ["person", "organization", "brand", "agent", "project"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "inactive", "draft", "archived"]
+    },
+    "description": {
+      "type": "string"
+    },
+    "roles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "affiliations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "wallets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["chain", "address", "label"],
+        "properties": {
+          "chain": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "domains": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "value"],
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "version": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    }
+  }
+}
