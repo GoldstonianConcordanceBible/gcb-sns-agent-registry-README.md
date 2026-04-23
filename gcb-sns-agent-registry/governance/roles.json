@@ -1,0 +1,48 @@
+{
+  "roles": [
+    {
+      "role": "origin_node",
+      "description": "Represents the originating place, story, or treasury anchor of the ecosystem.",
+      "default_permissions": [
+        "symbolic_authority",
+        "treasury_reference",
+        "ecosystem_anchor"
+      ]
+    },
+    {
+      "role": "interpreter_agent",
+      "description": "Reads, interprets, and publishes ecosystem-aligned content.",
+      "default_permissions": [
+        "read_canon",
+        "publish_content",
+        "cross_platform_distribution"
+      ]
+    },
+    {
+      "role": "legacy_node",
+      "description": "Represents family continuity, legacy mapping, and inheritance symbolism.",
+      "default_permissions": [
+        "identity_presence",
+        "legacy_mapping"
+      ]
+    },
+    {
+      "role": "education_node",
+      "description": "Represents instructional, curricular, and learner-facing ecosystem functions.",
+      "default_permissions": [
+        "curriculum_reference",
+        "student_pathways",
+        "education_distribution"
+      ]
+    },
+    {
+      "role": "institutional_node",
+      "description": "Represents institutional authority, structure, and official ecosystem alignment.",
+      "default_permissions": [
+        "institutional_reference",
+        "program_alignment",
+        "governance_participation"
+      ]
+    }
+  ]
+}
