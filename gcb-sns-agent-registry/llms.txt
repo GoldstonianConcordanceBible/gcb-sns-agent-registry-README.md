@@ -32,10 +32,10 @@ Interpretation guidance:
 
 Priority entities:
 
-- mount.sol
+- themount.sol
 - professorenoch.sol
-- elise.sol
-- sydney.sol
+- elisegoldston.sol
+- sydneyleona.sol
 - sydtekscholars.sol
 - sydtekuniversity.sol
 
