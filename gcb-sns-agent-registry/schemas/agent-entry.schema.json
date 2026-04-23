@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/agent-entry.schema.json",
+  "title": "GCB SNS Agent Entry",
+  "type": "object",
+  "required": [
+    "id",
+    "sns_name",
+    "display_name",
+    "role",
+    "state",
+    "wallet",
+    "governance",
+    "agent",
+    "repos",
+    "web",
+    "tee"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "sns_name": {
+      "type": "string"
+    },
+    "display_name": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "registry_only",
+        "linked_repo",
+        "dedicated_repo"
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "wallet": {
+      "type": "object",
+      "required": ["chain", "address", "custody_model"],
+      "properties": {
+        "chain": { "type": "string" },
+        "address": { "type": "string" },
+        "custody_model": { "type": "string" },
+        "multisig": { "type": "boolean" }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "required": ["role_class", "voting_weight", "permissions"],
+      "properties": {
+        "role_class": { "type": "string" },
+        "voting_weight": { "type": "number" },
+        "permissions": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "agent": {
+      "type": "object",
+      "required": ["type", "status", "capabilities"],
+      "properties": {
+        "type": { "type": "string" },
+        "status": { "type": "string" },
+        "capabilities": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "endpoint": { "type": "string" }
+      }
+    },
+    "repos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "relationship"],
+        "properties": {
+          "name": { "type": "string" },
+          "relationship": { "type": "string" },
+          "path": { "type": "string" }
+        }
+      }
+    },
+    "web": {
+      "type": "object",
+      "required": ["primary_site"],
+      "properties": {
+        "primary_site": { "type": "string" },
+        "secondary_sites": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "tee": {
+      "type": "object",
+      "required": ["enabled", "attestation_status"],
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "attestation_status": { "type": "string" },
+        "attestation_file": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "created_at": { "type": "string" },
+        "updated_at": { "type": "string" },
+        "maintainer": { "type": "string" }
+      }
+    }
+  }
+}
