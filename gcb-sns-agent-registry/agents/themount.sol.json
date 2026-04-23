@@ -1,0 +1,56 @@
+{
+  "id": "the-mount-sol",
+  "sns_name": "themount.sol",
+  "display_name": "The Mount",
+  "role": "origin_node",
+  "state": "linked_repo",
+  "description": "Origin and treasury-anchor identity representing the Mount where the Goldstonian Concordance Bible was written.",
+  "wallet": {
+    "chain": "solana",
+    "address": "REPLACE_WITH_WALLET",
+    "custody_model": "multisig_or_guarded_wallet",
+    "multisig": true
+  },
+  "governance": {
+    "role_class": "origin_node",
+    "voting_weight": 1.0,
+    "permissions": [
+      "symbolic_authority",
+      "treasury_reference",
+      "ecosystem_anchor",
+      "future_guardian_execution"
+    ]
+  },
+  "agent": {
+    "type": "guardian_node",
+    "status": "planned",
+    "capabilities": [
+      "treasury_reference",
+      "origin_story_resolution",
+      "future_secure_signing"
+    ],
+    "endpoint": ""
+  },
+  "repos": [
+    {
+      "name": "canonical-index",
+      "relationship": "linked_repo",
+      "path": "governance/origin"
+    }
+  ],
+  "web": {
+    "primary_site": "https://REPLACE_WITH_SITE",
+    "secondary_sites": []
+  },
+  "tee": {
+    "enabled": false,
+    "attestation_status": "not_configured",
+    "attestation_file": "",
+    "notes": "Candidate for future TEE-backed guardian or treasury logic."
+  },
+  "metadata": {
+    "created_at": "2026-04-22T00:00:00Z",
+    "updated_at": "2026-04-22T00:00:00Z",
+    "maintainer": "Dr. Justin Goldston"
+  }
+}
