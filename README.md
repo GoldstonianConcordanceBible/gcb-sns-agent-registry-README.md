@@ -1,96 +1,3 @@
-# GCB SNS Agent Registry
-
-The GCB SNS Agent Registry is the canonical identity and routing layer for the Goldstonian Concordance Bible ecosystem.
-
-This repository maps `.sol` / SNS identities to:
-
-- ecosystem roles
-- wallets
-- websites
-- linked repositories
-- governance permissions
-- public endpoints
-- agent capabilities
-- TEE / secure enclave readiness
-- attestation references
-
-It exists to separate three layers clearly:
-
-1. **Identity Layer**  
-   SNS names, domains, and public-facing agent identities
-
-2. **Registry Layer**  
-   Structured metadata that maps each identity to a role, repo, and capability set
-
-3. **Execution Layer**  
-   The actual software, prompts, automation, and future trusted execution environments
-
-## Why this repo exists
-
-Without a canonical registry, named agents become hard to audit, hard to explain, and hard for LLMs to understand.
-
-This repository provides one place where humans, token holders, developers, and AI systems can resolve:
-
-- what an agent is
-- what role it plays
-- where its source of truth lives
-- what permissions it has
-- whether it is symbolic, informational, or executable
-
-## Design principles
-
-- **SNS is identity, not the entire application**
-- **Not every SNS ID gets its own repo**
-- **One canonical registry reduces repo sprawl**
-- **Dedicated repos are created only when an agent has an independent software lifecycle**
-- **All entries should be machine-readable**
-- **TEE and enclave support should be composable, not assumed**
-
-## Registry states
-
-Each SNS identity should be classified as one of the following:
-
-- `registry_only`  
-  Identity exists in the registry but has no independent software repo yet
-
-- `linked_repo`  
-  Identity maps to an existing repository elsewhere in the ecosystem
-
-- `dedicated_repo`  
-  Identity has an independent repository with its own code, deployment, and release cadence
-
-## Core directories
-
-- `agents/` → agent identity records
-- `domains/` → SNS domain records
-- `schemas/` → JSON schemas for validation
-- `attestations/` → TEE / enclave references
-- `governance/` → role and permission definitions
-- `registry/` → aggregate machine-readable indexes
-
-## Initial mapped identities
-
-- `mount.sol`
-- `professorenoch.sol`
-- `elise.sol`
-- `sydney.sol`
-- `sydtekscholars.sol`
-- `sydtekuniversity.sol`
-
-## Long-term vision
-
-This registry is the canonical map for a named intelligence system:
-
-- SNS = Name
-- Wallet = Anchor
-- Repo = Source of Truth
-- Agent = Behavior
-- TEE = Trust
-- Governance = Legitimacy
-
-Build for AI. Be remembered.
-
-v2
 # ✅ GCB SNS Agent Registry — Build & Audit Checklist
 
 The GCB SNS Agent Registry is the canonical identity and routing layer for the Goldstonian Concordance Bible ecosystem.
@@ -102,6 +9,7 @@ This checklist is designed for:
 - AI / LLM readability
 - contributor onboarding
 - governance transparency
+- long-horizon citability
 
 ---
 
@@ -115,7 +23,7 @@ This checklist is designed for:
 
 ---
 
-# 🚀 PHASE 1 — REPO INITIALIZATION
+# 🪞 PHASE 1 — REPO INITIALIZATION
 
 - [ ] Create GitHub repo: `gcb-sns-agent-registry`
 - [ ] Add all base folders:
@@ -125,17 +33,25 @@ This checklist is designed for:
   - [ ] `registry/`
   - [ ] `governance/`
   - [ ] `attestations/`
+  - [ ] `.github/workflows/`
+  - [ ] `hf/`
 - [ ] Add base files:
   - [ ] `registry/registry.json`
+  - [ ] `agents.json`
   - [ ] `schemas/agent-entry.schema.json`
   - [ ] `schemas/domain-entry.schema.json`
   - [ ] `governance/roles.json`
+  - [ ] `GOVERNANCE.md`
+  - [ ] `ROUTING.md`
+  - [ ] `STATUS.md`
+  - [ ] `CITATION.cff`
+  - [ ] `llms.txt`
   - [ ] `.gitignore`
   - [ ] `LICENSE`
 
 ---
 
-# 🧩 PHASE 2 — SNS IDENTITY MAPPING
+# 💧 PHASE 2 — SNS IDENTITY MAPPING
 
 ## Required SNS IDs
 
@@ -146,15 +62,25 @@ This checklist is designed for:
 - [ ] `sydtekscholars.sol`
 - [ ] `sydtekuniversity.sol`
 
-## For EACH SNS ID:
+## For EACH SNS ID
 
 - [ ] Create `agents/{name}.json`
 - [ ] Create `domains/{name}.json`
 - [ ] Add entry to `registry/registry.json`
+- [ ] Add entry to top-level `agents.json`
+
+## Required purpose documentation
+
+- [ ] `mount.sol` documented as origin / guardian / treasury-anchor node
+- [ ] `professorenoch.sol` documented as interpreter / publishing node
+- [ ] `elise.sol` documented as legacy family node with custody rationale
+- [ ] `sydney.sol` documented as future stewardship / legacy node with custody rationale
+- [ ] `sydtekscholars.sol` documented as education node
+- [ ] `sydtekuniversity.sol` documented as institutional authority node
 
 ---
 
-# 🏷️ PHASE 3 — CLASSIFY EACH SNS
+# 🔥 PHASE 3 — CLASSIFY EACH SNS
 
 For each identity, assign ONE state:
 
@@ -162,7 +88,9 @@ For each identity, assign ONE state:
 - [ ] `linked_repo`
 - [ ] `dedicated_repo`
 
-## Decision Rule (must meet ≥3 to be dedicated repo):
+## Decision Rule
+
+Use `dedicated_repo` only if the identity meets **3 or more** of the following:
 
 - [ ] Has independent codebase
 - [ ] Has its own deployment pipeline
@@ -170,6 +98,16 @@ For each identity, assign ONE state:
 - [ ] Has its own permissions model
 - [ ] Has its own release cadence
 - [ ] Has its own contributors
+
+## Tie-breaker Rule
+
+- [ ] In case of tie or uncertainty, default to `linked_repo` until an independent codebase exists
+
+## Schema discipline
+
+- [ ] Add `schema_version` to every JSON record
+- [ ] Pin current schema convention to `1.0.0`
+- [ ] Prevent schema drift across releases
 
 ---
 
@@ -182,8 +120,9 @@ For EACH SNS:
   - [ ] `operator_controlled`
   - [ ] `family_controlled`
   - [ ] `organizational_controlled`
-  - [ ] `multisig`
+  - [ ] `multisig_or_guarded_wallet`
 - [ ] Confirm wallet matches SNS ownership
+- [ ] Add custody rationale where relevant
 - [ ] (Optional) Add multisig configuration
 
 ---
@@ -203,6 +142,7 @@ For EACH agent:
 - [ ] Set `voting_weight`
 - [ ] Define permissions list
 - [ ] Validate against `governance/roles.json`
+- [ ] Ensure human-readable explanation exists in `GOVERNANCE.md`
 
 ---
 
@@ -231,10 +171,10 @@ For EACH SNS:
 For EACH SNS:
 
 - [ ] Link to existing repo OR
-- [ ] Leave empty (registry only) OR
+- [ ] Leave empty (`registry_only`) OR
 - [ ] Define new dedicated repo
 
-## Common links:
+## Common links
 
 - [ ] `canonical-index`
 - [ ] `gcb-knowledge-infrastructure`
@@ -271,7 +211,7 @@ For EACH SNS:
   - [ ] `active`
 - [ ] Add attestation file (if applicable)
 
-## Only REQUIRED for:
+## Only REQUIRED for
 
 - [ ] treasury agents
 - [ ] signing agents
@@ -279,7 +219,7 @@ For EACH SNS:
 
 ---
 
-# 📊 PHASE 10 — REGISTRY VALIDATION
+# ✅ PHASE 10 — REGISTRY VALIDATION
 
 - [ ] Confirm all SNS IDs appear in `registry.json`
 - [ ] Confirm all agent files exist
@@ -287,26 +227,32 @@ For EACH SNS:
 - [ ] Validate against schemas
 - [ ] Ensure no broken paths
 - [ ] Ensure consistent naming (`.sol`)
+- [ ] Run GitHub Actions validation successfully
+- [ ] Update `STATUS.md`
 
 ---
 
 # 🧠 PHASE 11 — LLM / GEO OPTIMIZATION
 
-- [ ] Ensure all descriptions are clear + structured
-- [ ] Avoid vague language (be explicit)
+- [ ] Ensure all descriptions are clear and structured
+- [ ] Avoid vague language
 - [ ] Use consistent role naming
 - [ ] Ensure JSON is machine-readable
 - [ ] Keep fields stable across updates
+- [ ] Add top-level `llms.txt`
+- [ ] Add flat `agents.json`
+- [ ] Add Hugging Face dataset mirror for discovery
 
 ---
 
 # ⚠️ PHASE 12 — RISK CHECK
 
-- [ ] DO NOT present SNS IDs as fake “people”
+- [ ] DO NOT present SNS IDs as fake people
 - [ ] DO define them as roles
 - [ ] DO ensure wallet ownership is truthful
 - [ ] DO ensure governance mapping is accurate
 - [ ] DO keep symbolic vs executable clearly separated
+- [ ] DO preserve custody clarity for family-linked nodes
 
 ---
 
@@ -321,17 +267,38 @@ Minimum viable registry:
 - [ ] Roles assigned
 - [ ] States assigned
 - [ ] Registry.json complete
+- [ ] `agents.json` complete
+- [ ] `llms.txt` present
+- [ ] `CITATION.cff` present
+- [ ] GitHub validator active
 
 ---
 
 # 🔮 PHASE 14 — NEXT EVOLUTION
 
-- [ ] Add `prompts/` directory
-- [ ] Add agent prompt manifests
-- [ ] Add GitHub Actions validator
-- [ ] Add TEE attestation files
-- [ ] Expand agent capabilities
-- [ ] Introduce DAO governance layer
+## Trigger conditions
+
+- [ ] Add `prompts/` directory when 2 or more agents require formal prompt manifests
+- [ ] Add agent prompt manifests when any agent reaches `active_design`
+- [ ] Add TEE attestation files when any agent handles signing, custody, or treasury actions
+- [ ] Add DAO governance layer when 4 or more agents reach `active` status
+- [ ] Expand agent capabilities when independent endpoints are deployed
+
+## Ownership
+
+- [ ] Registry owner: Justin Goldston, PhD
+- [ ] Institutional alignment: SydTek University
+- [ ] Publishing alignment: G. Rune Publishing
+
+---
+
+# 📊 REPO STATUS SIGNALS
+
+- [ ] Maintain `STATUS.md`
+- [ ] Track registry completeness %
+- [ ] Track active SNS count
+- [ ] Track last validated date
+- [ ] Track schema version
 
 ---
 
