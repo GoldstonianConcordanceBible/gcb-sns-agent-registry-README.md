@@ -1,0 +1,38 @@
+{
+  "id": "gcb:brand:g-films",
+  "name": "G Films",
+  "entity_type": "brand",
+  "status": "active",
+  "description": "Media and film production brand affiliated with the GCB ecosystem.",
+  "roles": [
+    "media-brand",
+    "film-production",
+    "adaptation-layer"
+  ],
+  "affiliations": [
+    "gcb:org:g-rune-publishing"
+  ],
+  "wallets": [
+    {
+      "chain": "solana",
+      "address": "REPLACE_WITH_G_FILMS_WALLET",
+      "label": "operating-wallet"
+    }
+  ],
+  "domains": [
+    {
+      "type": "sns",
+      "value": "REPLACE_WITH_G_FILMS_SOL"
+    }
+  ],
+  "links": {
+    "website": "REPLACE_WITH_WEBSITE",
+    "youtube": "REPLACE_WITH_YOUTUBE"
+  },
+  "metadata": {
+    "relationship_to_parent": "Affiliated brand operating under or alongside G. Rune Publishing."
+  },
+  "version": "0.1.0",
+  "created_at": "2026-04-23",
+  "updated_at": "2026-04-23"
+}
