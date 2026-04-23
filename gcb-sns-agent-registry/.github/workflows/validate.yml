@@ -1,0 +1,51 @@
+name: Validate Registry
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install ajv-cli
+        run: npm install -g ajv-cli
+
+      - name: Validate agent files
+        run: |
+          for file in agents/*.json; do
+            ajv validate -s schemas/agent-entry.schema.json -d "$file"
+          done
+
+      - name: Validate domain files
+        run: |
+          for file in domains/*.json; do
+            ajv validate -s schemas/domain-entry.schema.json -d "$file"
+          done
+
+      - name: Validate registry indexes are valid JSON
+        run: |
+          python -m json.tool registry/registry.json > /dev/null
+          python -m json.tool agents.json > /dev/null
+          python -m json.tool governance/roles.json > /dev/null
+
+      - name: Check required top-level files
+        run: |
+          test -f README.md
+          test -f STATUS.md
+          test -f GOVERNANCE.md
+          test -f ROUTING.md
+          test -f CITATION.cff
+          test -f llms.txt
