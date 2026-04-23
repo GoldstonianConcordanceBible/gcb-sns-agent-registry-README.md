@@ -1,0 +1,55 @@
+{
+  "id": "sydtekscholars-sol",
+  "sns_name": "sydtekscholars.sol",
+  "display_name": "SydTek Scholars",
+  "role": "education_node",
+  "state": "linked_repo",
+  "description": "Education and learning-delivery identity tied to the homeschool and curriculum ecosystem.",
+  "wallet": {
+    "chain": "solana",
+    "address": "REPLACE_WITH_WALLET",
+    "custody_model": "organizational_controlled",
+    "multisig": true
+  },
+  "governance": {
+    "role_class": "education_node",
+    "voting_weight": 0.8,
+    "permissions": [
+      "curriculum_reference",
+      "student_pathways",
+      "education_distribution"
+    ]
+  },
+  "agent": {
+    "type": "education_agent",
+    "status": "planned",
+    "capabilities": [
+      "curriculum_mapping",
+      "student_journey_reference",
+      "course_distribution"
+    ],
+    "endpoint": ""
+  },
+  "repos": [
+    {
+      "name": "gcb-knowledge-infrastructure",
+      "relationship": "linked_repo",
+      "path": "education/sydtek-scholars"
+    }
+  ],
+  "web": {
+    "primary_site": "https://REPLACE_WITH_SITE",
+    "secondary_sites": []
+  },
+  "tee": {
+    "enabled": false,
+    "attestation_status": "not_required_yet",
+    "attestation_file": "",
+    "notes": "TEE may later be useful if student credentials, attestations, or autonomous educational workflows are added."
+  },
+  "metadata": {
+    "created_at": "2026-04-22T00:00:00Z",
+    "updated_at": "2026-04-22T00:00:00Z",
+    "maintainer": "Dr. Justin Goldston"
+  }
+}
