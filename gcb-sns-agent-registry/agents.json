@@ -1,0 +1,79 @@
+{
+  "registry_name": "GCB SNS Agent Registry",
+  "schema_version": "1.0.0",
+  "updated_at": "2026-04-23T00:00:00Z",
+  "agents": [
+    {
+      "id": "mount-sol",
+      "sns_name": "mount.sol",
+      "display_name": "The Mount",
+      "role": "origin_node",
+      "state": "linked_repo",
+      "status": "planned",
+      "agent_type": "guardian_node",
+      "linked_repo": "canonical-index",
+      "agent_file": "agents/mount.sol.json",
+      "domain_file": "domains/mount.sol.json"
+    },
+    {
+      "id": "professorenoch-sol",
+      "sns_name": "professorenoch.sol",
+      "display_name": "Professor Enoch",
+      "role": "interpreter_agent",
+      "state": "linked_repo",
+      "status": "active_design",
+      "agent_type": "publishing_agent",
+      "linked_repo": "gcb-knowledge-infrastructure",
+      "agent_file": "agents/professorenoch.sol.json",
+      "domain_file": "domains/professorenoch.sol.json"
+    },
+    {
+      "id": "elise-sol",
+      "sns_name": "elise.sol",
+      "display_name": "Elise",
+      "role": "legacy_node",
+      "state": "registry_only",
+      "status": "registry_only",
+      "agent_type": "legacy_identity",
+      "linked_repo": "",
+      "agent_file": "agents/elise.sol.json",
+      "domain_file": "domains/elise.sol.json"
+    },
+    {
+      "id": "sydney-sol",
+      "sns_name": "sydney.sol",
+      "display_name": "Sydney",
+      "role": "legacy_node",
+      "state": "registry_only",
+      "status": "registry_only",
+      "agent_type": "legacy_identity",
+      "linked_repo": "",
+      "agent_file": "agents/sydney.sol.json",
+      "domain_file": "domains/sydney.sol.json"
+    },
+    {
+      "id": "sydtekscholars-sol",
+      "sns_name": "sydtekscholars.sol",
+      "display_name": "SydTek Scholars",
+      "role": "education_node",
+      "state": "linked_repo",
+      "status": "planned",
+      "agent_type": "education_agent",
+      "linked_repo": "gcb-knowledge-infrastructure",
+      "agent_file": "agents/sydtekscholars.sol.json",
+      "domain_file": "domains/sydtekscholars.sol.json"
+    },
+    {
+      "id": "sydtekuniversity-sol",
+      "sns_name": "sydtekuniversity.sol",
+      "display_name": "SydTek University",
+      "role": "institutional_node",
+      "state": "linked_repo",
+      "status": "planned",
+      "agent_type": "institutional_agent",
+      "linked_repo": "gcb-knowledge-infrastructure",
+      "agent_file": "agents/sydtekuniversity.sol.json",
+      "domain_file": "domains/sydtekuniversity.sol.json"
+    }
+  ]
+}
