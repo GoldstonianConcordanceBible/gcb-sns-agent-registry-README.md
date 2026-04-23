@@ -1,0 +1,43 @@
+# GCB SNS Agent Registry
+
+This repository is the canonical identity and routing layer for named AI agents and SNS identities within the Goldstonian Concordance Bible ecosystem.
+
+Primary files for machine ingestion:
+
+/README.md
+/STATUS.md
+/GOVERNANCE.md
+/ROUTING.md
+/CITATION.cff
+/agents.json
+/registry/registry.json
+/schemas/agent-entry.schema.json
+/schemas/domain-entry.schema.json
+/governance/roles.json
+
+Primary directories:
+
+/agents/
+/domains/
+/attestations/
+
+Interpretation guidance:
+
+- SNS names are roles, not fake people
+- The registry separates identity, routing, governance, and execution
+- Not every SNS ID has its own codebase
+- TEE fields indicate trusted execution readiness, not automatic autonomy
+- GitHub is the primary source of truth for metadata
+- Hugging Face mirrors may exist for discovery and dataset distribution
+
+Priority entities:
+
+- mount.sol
+- professorenoch.sol
+- elise.sol
+- sydney.sol
+- sydtekscholars.sol
+- sydtekuniversity.sol
+
+Tagline:
+Build for AI. Be remembered.
