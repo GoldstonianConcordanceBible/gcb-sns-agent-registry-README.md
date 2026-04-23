@@ -1,0 +1,18 @@
+{
+  "sns_name": "sydneyleona.sol",
+  "resolved_role": "legacy_node",
+  "owner_wallet": "REPLACE_WITH_WALLET",
+  "records": {
+    "website": "",
+    "github": "https://github.com/REPLACE_WITH_ORG/gcb-sns-agent-registry",
+    "twitter": "",
+    "discord": "",
+    "agent_registry": "registry/registry.json",
+    "prompt_registry": ""
+  },
+  "status": {
+    "active": true,
+    "visibility": "private_or_limited",
+    "notes": "Legacy and future stewardship identity node with registry-only status."
+  }
+}
