@@ -4,8 +4,8 @@
   "updated_at": "2026-04-23T00:00:00Z",
   "agents": [
     {
-      "id": "mount-sol",
-      "sns_name": "mount.sol",
+      "id": "themount-sol",
+      "sns_name": "themount.sol",
       "display_name": "The Mount",
       "role": "origin_node",
       "state": "linked_repo",
@@ -28,8 +28,8 @@
       "domain_file": "domains/professorenoch.sol.json"
     },
     {
-      "id": "elise-sol",
-      "sns_name": "elise.sol",
+      "id": "elisegoldston-sol",
+      "sns_name": "elisegoldston.sol",
       "display_name": "Elise",
       "role": "legacy_node",
       "state": "registry_only",
@@ -40,8 +40,8 @@
       "domain_file": "domains/elise.sol.json"
     },
     {
-      "id": "sydney-sol",
-      "sns_name": "sydney.sol",
+      "id": "sydneyleona-sol",
+      "sns_name": "sydneyleona.sol",
       "display_name": "Sydney",
       "role": "legacy_node",
       "state": "registry_only",
